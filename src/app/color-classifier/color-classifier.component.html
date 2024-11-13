@@ -1,0 +1,22 @@
+<div class="container p-4">
+    <h2 class="text-center text-light">Bienvenido, ingresa una imagen</h2>
+
+    <div class="mb-3">
+        <input type="file" class="form-control" (change)="onImageUpload($event)" />
+    </div>
+
+    <div class="text-center mb-4">
+        <button class="btn btn-primary m-1" (click)="applyFilter('protanopia')">Protanopia</button>
+        <button class="btn btn-primary m-1" (click)="applyFilter('deuteranopia')">Deuteranopia</button>
+        <button class="btn btn-primary m-1" (click)="applyFilter('tritanopia')">Tritanopia</button>
+        <button class="btn btn-secondary m-1" (click)="applyFilter('')">Original</button>
+    </div>
+
+    <div *ngIf="imagePreview" class="text-center mb-4">
+        <h3>Vista previa de la imagen:</h3>
+        <img [src]="imagePreview" alt="Imagen subida" class="img-thumbnail" />
+    </div>
+    <div *ngIf="filterDescription" class="alert alert-info">
+        {{ filterDescription }}
+    </div>
+</div>

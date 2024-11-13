@@ -1,0 +1,20 @@
+.color-box {
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.container{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-image: url('/bg.avif');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
